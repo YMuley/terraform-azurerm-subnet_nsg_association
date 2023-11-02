@@ -1,3 +1,3 @@
 locals {
-  subnet_list = { for subnet in var.subnet_list : format("%s/%s", subnet.virtual_network_name, subnet.subnet_name) => subnet }
+  network_security_group={for network_security_group in var.association_list:nsg.nsg_name=>nsg}
 }
