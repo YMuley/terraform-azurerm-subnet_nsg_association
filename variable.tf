@@ -5,8 +5,8 @@ variable "association_list" {
 }
 
 variable "subnet_output" {
-  type        = any
-  default     = []
+  type        = map(any)
+  default     = {}
   description = "list of Subnet objects"
 }
 
